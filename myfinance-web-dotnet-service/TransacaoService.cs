@@ -32,8 +32,8 @@ namespace myfinance_web_dotnet_service
         public void Excluir(int Id)
         {
             var transacao = new Transacao() { Id = Id };
-            _dbContext.Attach(Transacao);
-            _dbContext.Remove(Transacao);
+            _dbContext.Attach(transacao);
+            _dbContext.Remove(transacao);
             _dbContext.SaveChanges();
         }
         public List<Transacao> ListarRegistros()
